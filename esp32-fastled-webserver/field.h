@@ -121,7 +121,6 @@ String setFieldValue(String name, String value, FieldList fields, uint8_t count)
   }
 
   writeFieldsToEEPROM(fields, count);
-
   return result;
 }
 
