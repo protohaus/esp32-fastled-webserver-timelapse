@@ -47,12 +47,12 @@ void setupWeb() {
     digitalWrite(led, 1);
   });
 
-  webServer.serveStatic("/", SPIFFS, "/index.htm", "max-age=86400");
-  webServer.serveStatic("/index.htm", SPIFFS, "/index.htm", "max-age=86400");
-  webServer.serveStatic("/favicon.ico", SPIFFS, "/favicon.ico", "max-age=86400");
-  webServer.serveStatic("/css/styles.css", SPIFFS, "/css/styles.css", "max-age=86400");
-  webServer.serveStatic("/js/app.js", SPIFFS, "/js/app.js", "max-age=86400");
-  webServer.serveStatic("/images/atom196.png", SPIFFS, "/images/atom196.png", "max-age=86400");
+  webServer.serveStatic("/", SD_MMC, "/index.htm", "max-age=86400");
+  webServer.serveStatic("/index.htm", SD_MMC, "/index.htm", "max-age=86400");
+  webServer.serveStatic("/favicon.ico", SD_MMC, "/favicon.ico", "max-age=86400");
+  webServer.serveStatic("/css/styles.css", SD_MMC, "/css/styles.css", "max-age=86400");
+  webServer.serveStatic("/js/app.js", SD_MMC, "/js/app.js", "max-age=86400");
+  webServer.serveStatic("/images/atom196.png", SD_MMC, "/images/atom196.png", "max-age=86400");
 
   webServer.begin();
   Serial.println ( "HTTP server started" );
